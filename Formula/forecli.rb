@@ -18,21 +18,21 @@ class Forecli < Formula
   desc "CLI for the foreai (uiforeia) platform"
   homepage "https://github.com/foreai-co/foreCLI"
   license "Apache-2.0"
-  version "0.1.11"
+  version "0.1.12"
 
   # BEGIN binaries — managed by scripts/update-brew-formula.py
   on_macos do
-    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.11/forecli-0.1.11-darwin-arm64.tar.gz"
-    sha256 "c9d4e8672f43b600b16e4ddda6dccff949af7d8c37c24fc626f361451fb4ac9f"
+    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.12/forecli-0.1.12-darwin-arm64.tar.gz"
+    sha256 "fa3f1e8e1d33fc87c019a7938ff09b338d2d0b17462cccccfea7175268fc62fb"
   end
   on_linux do
     on_intel do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.11/forecli-0.1.11-linux-x86_64.tar.gz"
-      sha256 "ca5fdd4970e391fbeaa6a8f323157ba97d2a1a9aca868b0810e8f7467f49a198"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.12/forecli-0.1.12-linux-x86_64.tar.gz"
+      sha256 "9f1c1124a1e84438d353e7b2cdc9295982031210c165c40346dfc9469f593baa"
     end
     on_arm do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.11/forecli-0.1.11-linux-arm64.tar.gz"
-      sha256 "64533f83a2c55412f9aaa6851667b71e2f215a07f2e370eb48381f9c04d1401a"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.12/forecli-0.1.12-linux-arm64.tar.gz"
+      sha256 "0685775642bd6dfde4cd109150353589f50afeb3512ff052ed6b434fcfbc9c0e"
     end
   end
 
