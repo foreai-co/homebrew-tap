@@ -18,28 +18,33 @@ class Forecli < Formula
   desc "CLI for the foreai (uiforeia) platform"
   homepage "https://github.com/foreai-co/foreCLI"
   license "Apache-2.0"
-  version "0.1.8"
+  version "0.1.10"
 
   # BEGIN binaries — managed by scripts/update-brew-formula.py
   on_macos do
-    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.8/forecli-0.1.8-darwin-arm64.tar.gz"
-    sha256 "b5d02bf3f772ef19b474ee0cf2784f6bedadc77643b0cb572c375fade2da3196"
+    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.10/forecli-0.1.10-darwin-arm64.tar.gz"
+    sha256 "d110a006a358abc1968c5cda53e33015250f82da07e9ab7d89e79a6fc58bfc60"
   end
   on_linux do
     on_intel do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.8/forecli-0.1.8-linux-x86_64.tar.gz"
-      sha256 "e27955db7326bba982bf8bfe42d3c5c3d477473ad03c31eb86fb58bc462ea80b"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.10/forecli-0.1.10-linux-x86_64.tar.gz"
+      sha256 "b8996c84da1a964fe8650abc27452cd14fa5279b9b3838e1a19ea6c80ae9ff1c"
     end
     on_arm do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.8/forecli-0.1.8-linux-arm64.tar.gz"
-      sha256 "bd4430df8e645574979da29db22231a9770f2fefbaae0fa68d29ae20381533b0"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.1.10/forecli-0.1.10-linux-arm64.tar.gz"
+      sha256 "6aec236fb7ac42ca1f855251eca79ad48cbbe938b388a8a9bf440e3c7635c412"
     end
   end
 
   # END binaries
 
   def install
-    bin.install "fore"
+    # PyInstaller --onedir tarballs ship the binary alongside an `_internal/`
+    # tree of bundled deps. Park the whole thing under libexec and symlink
+    # the launcher into bin so brew picks it up on PATH. The binary resolves
+    # `_internal/` relative to its real (libexec) path, so the symlink works.
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"fore"
   end
 
   def caveats
