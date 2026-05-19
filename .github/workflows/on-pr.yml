@@ -1,0 +1,14 @@
+name: on-pr
+
+on:
+  pull_request:
+
+jobs:
+  on-pr:
+    name: on-pr
+    runs-on: ubuntu-latest
+    steps:
+      - name: No checks required
+        run: |
+          echo "Currently no checks required for this repository."
+          echo "Other repos that push here should have checks configured."
