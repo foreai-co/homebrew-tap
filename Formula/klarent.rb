@@ -18,21 +18,21 @@ class Klarent < Formula
   desc "CLI for the klarent platform"
   homepage "https://github.com/foreai-co/klarent"
   license "Apache-2.0"
-  version "0.5.1"
+  version "0.6.0"
 
   # BEGIN binaries — managed by scripts/update-brew-formula.py
   on_macos do
-    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.5.1/klarent-0.5.1-darwin-arm64.tar.gz"
-    sha256 "c3a1dac29d4b0670ef1c1c652b833a53e8dec2653098d6d64f0391f408210855"
+    url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.6.0/klarent-0.6.0-darwin-arm64.tar.gz"
+    sha256 "c89c8ba413751fb3351d10379d926b882ac441816b1d4f4f479c6650780a6543"
   end
   on_linux do
     on_intel do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.5.1/klarent-0.5.1-linux-x86_64.tar.gz"
-      sha256 "c0ba467111e341daafb4e23b7b217a2e3fff2183d62e8c0beb2befc505a0f7dc"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.6.0/klarent-0.6.0-linux-x86_64.tar.gz"
+      sha256 "b06d482efda1a6ab2bc510f9a39a576c967e538281e69f1aaf4c832855d2ae48"
     end
     on_arm do
-      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.5.1/klarent-0.5.1-linux-arm64.tar.gz"
-      sha256 "ae327d5dd99c9698fd4245abd7f9e16bceb4b19eea9aa200cd983d2f5b8a6481"
+      url "https://github.com/foreai-co/homebrew-tap/releases/download/v0.6.0/klarent-0.6.0-linux-arm64.tar.gz"
+      sha256 "00c34eb074849384665d201ba309fbb2f0fb776e79982c1c6e9cc9168394cc6b"
     end
   end
 
